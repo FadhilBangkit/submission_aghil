@@ -6,7 +6,10 @@ import seaborn as sns
 import datetime
 
 # Load your data
-df_all = pd.read_csv("C:/Users/user/submission/Dashboard/main_data.csv")
+sheet_id = '1xowE-Xuc2w5VInaQubQc8oJg74ReaPURNfUKEpSWQk0'
+sheet_name ='main_data'
+url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
+df_all = pd.read_csv(url)
 
 # Sidebar selection for variable
 with st.sidebar:
